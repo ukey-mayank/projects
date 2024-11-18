@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Lazy Loading With Datatable" icon-name="standard:account">
+        <div class="container slds-p-around_medium slds-m-around_medium">
+            <lightning-datatable
+            key-field="id"
+            columns={columns}
+            data={accounts}
+            hide-checkbox-column="true">
+            </lightning-datatable>
+        </div>
+        <div class="button-container slds-m-around_medium">
+            <lightning-button class="slds-m-around_medium" variant="brand" label="Previous" onclick={handlePrevious} disabled={disablePrevious}></lightning-button>
+            <lightning-button class="slds-m-around_medium" variant="brand" label="Next" onclick={handleNext} disabled={disableNext}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
